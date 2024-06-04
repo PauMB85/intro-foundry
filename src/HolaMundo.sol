@@ -2,6 +2,12 @@
 
 pragma solidity ^0.8.24;
 
+/**
+El console solo está disponible para pruebas
+ */
+
+import "forge-std/console.sol";
+
 contract HolaMundo {
     string private mensaje;
 
@@ -10,6 +16,7 @@ contract HolaMundo {
     }
 
     function getMensaje() public view returns (string memory) {
+        console.log("Devolvemos el mensaje");
         return mensaje;
     }
 
